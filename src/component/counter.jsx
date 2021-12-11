@@ -9,7 +9,7 @@ class Counter extends React.Component {
     constructor() {
         super();
         // must use super(); method prior to using .this to get the Counter instead of undefined
-        console.log('Constructor', this);
+        this.handleIncrement = this.handleIncrement.bind(this);
     }
 
     handleIncrement() {
