@@ -6,17 +6,12 @@ class Counter extends React.Component {
 		tags: ['tag1', 'tag2', 'tag3'],
 	};
 
-    // constructor() {
-    //     super();
-    //     // must use super(); method prior to using .this to get the Counter instead of undefined
-    //     this.handleIncrement = this.handleIncrement.bind(this);
-    // }
+// Binding is very powerful. Remember to use in the future!
 
-    // Attempting to shorten the code of the constructor above into the handleIncrement() below turning the handleIncrement() into an arrow function.
-
-    handleIncrement = () => {  //this Works! Cleaner code to do the same thing!
-        console.log('Increment Clicked!', this);
-    }
+    handleIncrement = () => {
+        // React uses and requires setState() to update the DOM to what has changed.
+        this.setState({ count: this.state.count +1 });
+    }                   // is taking the count state and adjusting it to increase by one each time the function is called.
 
 	render() {
 		return (
