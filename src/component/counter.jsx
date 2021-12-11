@@ -6,8 +6,14 @@ class Counter extends React.Component {
 		tags: ['tag1', 'tag2', 'tag3'],
 	};
 
+    constructor() {
+        super();
+        // must use super(); method prior to using .this to get the Counter instead of undefined
+        console.log('Constructor', this);
+    }
+
     handleIncrement() {
-        console.log('Increment Clicked!');
+        console.log('Increment Clicked!', this);
     }
 
 	render() {
