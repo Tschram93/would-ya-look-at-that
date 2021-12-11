@@ -14,7 +14,7 @@ class Counter extends React.Component {
 
     // Attempting to shorten the code of the constructor above into the handleIncrement() below turning the handleIncrement() into an arrow function.
 
-    handleIncrement() {
+    handleIncrement = () => {  //this Works! Cleaner code to do the same thing!
         console.log('Increment Clicked!', this);
     }
 
