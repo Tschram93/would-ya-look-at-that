@@ -6,25 +6,15 @@ class Counter extends React.Component {
 		tags: ['tag1', 'tag2', 'tag3'],
 	};
 
-	renderTags() {
-		if (this.state.tags.length === 0)
-			return <p>There are currently no tags.</p>;
-
-		return (
-			<ul>
-				{this.state.tags.map((tag) => (
-					<li key={tag}>{tag}</li>
-				))}
-			</ul>
-		);
-	}
+    handleIncrement() {
+        console.log('Increment Clicked!');
+    }
 
 	render() {
 		return (
 			<div>
 				<span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-				<button className="btn btn-secondary btn-sm"> Increment </button>
-				{this.renderTags()}
+				<button onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> Increment </button>
 			</div>
 		);
 	}
@@ -40,7 +30,18 @@ class Counter extends React.Component {
 	}
 }
 
-{
-}
+// renderTags() {
+//     if (this.state.tags.length === 0)
+//         return <p>There are currently no tags.</p>;
+
+//     return (
+//         <ul>
+//             {this.state.tags.map((tag) => (
+//                 <li key={tag}>{tag}</li>
+//             ))}
+//         </ul>
+//     );
+// }
+// {this.renderTags()}
 
 export default Counter;
